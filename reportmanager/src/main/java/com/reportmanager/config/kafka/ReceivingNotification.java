@@ -18,9 +18,9 @@ public class ReceivingNotification {
 
     @KafkaListener(topics = "orderNow", groupId = "ordertemplate",containerFactory = "emailKafkaListenerContainerFactory")
     public void handleEmailTemplateMessage(OrderDetailsRequest orderDetailsRequest){
-        log.info("Entered Consuming Network");
+
         try{
-            log.info("Entered Consuming Network");
+
             if(!ObjectUtils.isEmpty(orderDetailsRequest)){
           orderService.saveOrder(orderDetailsRequest);
             }
