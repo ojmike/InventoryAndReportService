@@ -1,0 +1,1 @@
+SELECT o.created_at AS createdAt, SUM(o.total_order) AS totalOrder, SUM(o.total_price) AS totalPrice FROM order_summary AS o WHERE o.created_at = '2022-03-13 10:08:12.225560' GROUP BY o.created_at ORDER BY o.created_at ASC
